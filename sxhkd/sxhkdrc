@@ -1,0 +1,6 @@
+super + {equal,minus,m} 
+	$HOME/sucklessToolsConfig/scripts/volume.sh {up,down,toggle}
+super + p
+	$HOME/sucklessToolsConfig/scripts/pipe_clipboard/pipe_clipboard
+super + s
+	$HOME/sucklessToolsConfig/scripts/takescreenshot.sh

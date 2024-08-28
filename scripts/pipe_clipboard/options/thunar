@@ -1,0 +1,1 @@
+thunar "$(xsel --output --clipboard)"

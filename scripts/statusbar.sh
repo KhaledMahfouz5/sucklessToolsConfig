@@ -1,0 +1,1 @@
+xprop -root -set WM_NAME "Alsalam alaikom"

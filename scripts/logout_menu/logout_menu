@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# List options from the specified directory and pass the selection to dmenu
+selected_option=$(ls -1 "$HOME/sucklessToolsConfig/scripts/logout_menu/options" | dmenu -nf red -sb red "$@")
+
+# Check if an option was selected
+if [ -n "$selected_option" ]; then
+    # Execute the selected option as a script
+    bash "$HOME/sucklessToolsConfig/scripts/logout_menu/options/$selected_option"
+else
+    echo "No option selected."
+fi
