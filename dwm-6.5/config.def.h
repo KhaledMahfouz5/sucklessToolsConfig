@@ -32,6 +32,7 @@ static const char *const autostart[] = {
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/compton.sh", NULL,
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/redshift.sh", NULL,
   	"sh", "-c", "sxhkd -c $HOME/sucklessToolsConfig/sxhkd/sxhkdrc &", NULL,
+  	"sh", "-c", "/usr/bin/syncthing --no-browser", NULL,
 	NULL
 };
 
