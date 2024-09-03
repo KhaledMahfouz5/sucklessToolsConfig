@@ -4,3 +4,5 @@ super + p
 	$HOME/sucklessToolsConfig/scripts/pipe_clipboard/pipe_clipboard
 super + s
 	$HOME/sucklessToolsConfig/scripts/takescreenshot.sh
+super + a
+	$HOME/sucklessToolsConfig/scripts/mount-android-device.sh
