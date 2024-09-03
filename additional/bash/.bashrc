@@ -82,6 +82,7 @@ if [ -x /usr/bin/dircolors ]; then
 	alias xcopy='xsel --input --clipboard'
 	alias xpaste='xsel --output --clipboard'
 	alias reload_sxhkd='pkill -10 -x sxhkd'
+	alias sl='sl -ale'
 fi
 
 # colored GCC warnings and errors
@@ -111,3 +112,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
