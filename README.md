@@ -2,6 +2,31 @@
 
 This repository contains my configuration for suckless tools (dwm, st, dmenu, etc.), along with some helpful scripts.
 
+## Info From My System 
+```
+----------------------------------------------------------------------
+                 `-++:`                                      
+               ./oooooo/-                  ------------------
+            `:oooooooooooo:.               OS: openSUSE Leap 15.6 x86_64
+          -+oooooooooooooooo+-`            Host: Inspiron 3501
+       ./oooooooooooooooooooooo/-          Kernel: 6.4.0-150600.23.25-default
+      :oooooooooooooooooooooooooo:                        
+    `  `-+oooooooooooooooooooo/-   `                                         
+ `:oo/-   .:ooooooooooooooo+:`  `-+oo/.    Shell: bash 4.4.23
+`/oooooo:.   -/oooooooooo/.   ./oooooo/.   Resolution: 1920x1080
+  `:+ooooo+-`  `:+oooo+-   `:oooooo+:`     WM: dwm
+     .:oooooo/.   .::`   -+oooooo/.        Theme: Breeze [GTK2/3]
+        -/oooooo:.    ./oooooo+-           Icons: breeze-dark [GTK2/3]
+          `:+ooooo+-:+oooooo:`             Terminal: alacritty
+             ./oooooooooo/.                CPU: 11th Gen Intel i5-1135G7 (8) @ 4.200GHz
+                -/oooo+:`                  GPU: Intel TigerLake-LP GT2 [Iris Xe Graphics]
+                  `:/.                     Memory: 593MiB / 7671MiB
+				                           ------------------
+----------------------------------------------------------------------
+```
+## ScreenShots
+![screenshot](./screenshot.png)
+
 ## Installation Guide
 
 ### 1. Install Build Dependencies
@@ -70,7 +95,7 @@ pip install psutil # Add other required Python packages here
 ### 4. Clone and Build
 ```bash
 # Clone the repository
-git clone https://github.com/khaledyousryhegazy/sucklessToolsConfig.git
+git clone https://github.com/KhaledMahfouz5/sucklessToolsConfig.git
 cd sucklessToolsConfig
 
 # Build dwm
@@ -87,18 +112,6 @@ cd ..
 cd dmenu-5.3
 sudo make clean install
 cd ..
-```
-
-### 5. Configure
-1. Copy configuration files:
-```bash
-# Create necessary directories
-mkdir -p ~/.config/sxhkd
-mkdir -p ~/.config/conky
-
-# Copy configurations
-cp -r sxhkd/* ~/.config/sxhkd/
-cp -r conky/* ~/.config/conky/
 ```
 
 2. Set up autostart:
@@ -129,10 +142,11 @@ startx
 
 ## Note
 
-The `scripts/statusbar/pythonvenv` directory is ignored as it can be generated with:
+- The `scripts/statusbar/pythonvenv` directory is ignored as it can be generated with:
 ```bash
 python3 -m venv scripts/statusbar/pythonvenv
 ```
+- The wallpaper sebastian.png is used as the default wallpaper, you can change it from nitrogen .
 
 ## Contributing
 
