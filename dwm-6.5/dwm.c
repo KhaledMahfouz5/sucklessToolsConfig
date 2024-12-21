@@ -964,48 +964,27 @@ getstate(Window w)
 }
 
 int
-gettextprop(Window w, Atom atom, char *text, unsigned int size) {
-     XTextProperty name;
-     char filtered[size];
-     unsigned int j = 0;
-     int is_wm_name = 0; // Track if the source is WM_NAME
+gettextprop(Window w, Atom atom, char *text, unsigned int size)
+{
+	char **list = NULL;
+	int n;
+	XTextProperty name;
 
-     if (!text || size == 0)
-         return 0;
-     text[0] = '\0';
-     if (!XGetTextProperty(dpy, w, &name, atom) || !name.nitems) {
-         return 0;
-     }
-     if (name.encoding == XA_STRING) {
-         strncpy(text, (char *)name.value, size - 1);
-     } else {
-         return 0;
-     }
-     text[size - 1] = '\0';
-     XFree(name.value);
-
-     /* Check if the source is WM_NAME */
-     if (atom == XA_WM_NAME) {
-         is_wm_name = 1;
-     }
- 
-     /* Filter out special characters unless the source is WM_NAME */
-     if (!is_wm_name) {
-         for (unsigned int i = 0; text[i] != '\0' && j < size - 1; i++) {
-             if ((text[i] >= 'A' && text[i] <= 'Z') || // Uppercase letters
-                 (text[i] >= 'a' && text[i] <= 'z') || // Lowercase letters
-                 (text[i] >= '0' && text[i] <= '9') || // Numbers
-                 text[i] == ' ') {                    // Space
-                 filtered[j++] = text[i];
-             }
-         }
-         filtered[j] = '\0';
-         strncpy(text, filtered, size - 1); // Copy filtered text back
-         text[size - 1] = '\0';
-     }
- 
-     return 1;
- }
+	if (!text || size == 0)
+		return 0;
+	text[0] = '\0';
+	if (!XGetTextProperty(dpy, w, &name, atom) || !name.nitems)
+		return 0;
+	if (name.encoding == XA_STRING) {
+		strncpy(text, (char *)name.value, size - 1);
+	} else if (XmbTextPropertyToTextList(dpy, &name, &list, &n) >= Success && n > 0 && *list) {
+		strncpy(text, *list, size - 1);
+		XFreeStringList(list);
+	}
+	text[size - 1] = '\0';
+	XFree(name.value);
+	return 1;
+}
 
 void
 grabbuttons(Client *c, int focused)
