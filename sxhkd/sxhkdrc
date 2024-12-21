@@ -6,3 +6,7 @@ super + s
 	$HOME/sucklessToolsConfig/scripts/takescreenshot.sh
 super + a
 	$HOME/sucklessToolsConfig/scripts/mount-android-device.sh
+super + n
+	$HOME/sucklessToolsConfig/scripts/bluetoothconnect.sh
+super + shift + n
+	$HOME/sucklessToolsConfig/scripts/bluetoothdisconnect.sh
