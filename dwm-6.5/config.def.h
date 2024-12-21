@@ -29,7 +29,7 @@ static const char *const autostart[] = {
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/statusbar/src/start.sh", NULL,
   	"sh", "-c", "nitrogen --restore", NULL,
   	"sh", "-c", "setxkbmap -layout us,ara -option grp:alt_shift_toggle", NULL,
-  	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/compton.sh", NULL,
+  	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/picom.sh", NULL,
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/colortemp.sh", NULL,
   	"sh", "-c", "sxhkd -c $HOME/sucklessToolsConfig/sxhkd/sxhkdrc &", NULL,
   	"sh", "-c", "/usr/bin/syncthing --no-browser", NULL,
@@ -138,4 +138,3 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
