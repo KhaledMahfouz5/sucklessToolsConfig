@@ -113,6 +113,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Add JBang to environment
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
