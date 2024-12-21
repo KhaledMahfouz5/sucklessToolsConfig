@@ -30,7 +30,7 @@ static const char *const autostart[] = {
   	"sh", "-c", "nitrogen --restore", NULL,
   	"sh", "-c", "setxkbmap -layout us,ara -option grp:alt_shift_toggle", NULL,
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/compton.sh", NULL,
-  	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/redshift.sh", NULL,
+  	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/colortemp.sh", NULL,
   	"sh", "-c", "sxhkd -c $HOME/sucklessToolsConfig/sxhkd/sxhkdrc &", NULL,
   	"sh", "-c", "/usr/bin/syncthing --no-browser", NULL,
   	"sh", "-c", "xscreensaver --no-splash &", NULL,
@@ -53,8 +53,8 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.88; /* factor of master area size [0.05..0.95] */
-static const float dmfact     = mfact; 
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
+static const float dmfact     = 0.5; 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -80,7 +80,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
