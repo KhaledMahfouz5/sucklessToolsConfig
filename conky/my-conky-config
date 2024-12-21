@@ -54,7 +54,7 @@ conky.config = {
 conky.text = [[
 ${color grey}Info:$color ${scroll 32 Conky $conky_version - $sysname $nodename $kernel $machine}
 $hr
-${color grey}Uptime:$color ${exec uptime -p}
+${color grey}Uptime:$color ${exec uptime | awk -F', ' '{print $1}' | awk '{print $3}'}
 ${color grey}Bluetooth Device:$color ${exec $HOME/sucklessToolsConfig/scripts/bluetooth_connected_device.sh}
 ${color grey}RAM :$color $mem/$memmax - $memperc% ${membar 4}
 ${color grey}Swap :$color $swap/$swapmax - $swapperc% ${swapbar 4}
