@@ -139,14 +139,14 @@ startx
 - you should use the patched version of libXft and you should have installed the xorg-macros package 
 - you have to install an emoji font like **Noto Color Emoji** font , you can download it from google fonts .
 - you can install libXft-bgra and xorg-macros from your package manager or you can build the both manually .
-- patched libXft :
+1- patched libXft :
 ```bash
 git clone https://github.com/uditkarode/libxft-bgra
 cd libxft-bgra
 sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
 sudo make install
 ```
-- xorg-macros :
+2- xorg-macros :
 ```bash
 wget http://ftp.x.org/pub/individual/util/util-macros-1.19.3.tar.gz
 tar -xzvf util-macros-1.19.3.tar.gz
