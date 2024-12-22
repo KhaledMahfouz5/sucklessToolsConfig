@@ -137,7 +137,7 @@ startx
 ## Fix rendering Emojis Issue 
 - you don't need to modify dwm source code 
 - you should use the patched version of libXft and you should have installed the xorg-macros package 
-- you have to install and emoji font like **Noto Color Emoji** font , you can download it from google fonts .
+- you have to install an emoji font like **Noto Color Emoji** font , you can download it from google fonts .
 - you can install libXft-bgra and xorg-macros from your package manager or you can build the both manually .
 - patched libXft :
 ```bash
