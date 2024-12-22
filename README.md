@@ -134,12 +134,11 @@ Then start X server:
 startx
 ```
 
-## Fix rendering Imojis Issue 
-you don't need to modify dwm source code 
-you should use the patched version of libXft 
-and you should have installed the xorg-macros package 
-you can install libXft-bgra and xorg-macros from your package manager 
-or you can build the both manually .
+## Fix rendering Emojis Issue 
+- you don't need to modify dwm source code 
+- you should use the patched version of libXft and you should have installed the xorg-macros package 
+- you have to install and emoji font like **Noto Color Emoji** font , you can download it from google fonts .
+- you can install libXft-bgra and xorg-macros from your package manager or you can build the both manually .
 - patched libXft :
 ```bash
 git clone https://github.com/uditkarode/libxft-bgra
@@ -155,7 +154,7 @@ cd util-macros-1.19.3
 ./configure
 sudo make install
 ```
-you can see `https://www.youtube.com/watch?v=IcQslz5Pb5Y` .
+- see `https://www.youtube.com/watch?v=IcQslz5Pb5Y` .
 
 ## Usage
 
