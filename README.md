@@ -26,6 +26,7 @@ This repository contains my configuration for suckless tools (dwm, st, dmenu, et
 ```
 ## ScreenShots
 ![screenshot](./screenshot.png)
+![screenshot-with-dmenu](./screenshot2.png)
 
 ## Installation Guide
 
