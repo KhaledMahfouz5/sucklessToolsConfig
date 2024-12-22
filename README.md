@@ -134,6 +134,29 @@ Then start X server:
 startx
 ```
 
+## Fix rendering Imojis Issue 
+you don't need to modify dwm source code 
+you should use the patched version of libXft 
+and you should have installed the xorg-macros package 
+you can install libXft-bgra and xorg-macros from your package manager 
+or you can build the both manually .
+- patched libXft :
+```bash
+git clone https://github.com/uditkarode/libxft-bgra
+cd libxft-bgra
+sh autogen.sh --sysconfdir=/etc --prefix=/usr --mandir=/usr/share/man
+sudo make install
+```
+- xorg-macros :
+```bash
+wget http://ftp.x.org/pub/individual/util/util-macros-1.19.3.tar.gz
+tar -xzvf util-macros-1.19.3.tar.gz
+cd util-macros-1.19.3
+./configure
+sudo make install
+```
+you can see `https://www.youtube.com/watch?v=IcQslz5Pb5Y` .
+
 ## Usage
 
 - Alt + Shift: Toggle between keyboard layouts (US/Arabic)
