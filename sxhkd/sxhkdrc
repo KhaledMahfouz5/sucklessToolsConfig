@@ -10,3 +10,5 @@ super + n
 	$HOME/sucklessToolsConfig/scripts/bluetoothconnect.sh
 super + shift + n
 	$HOME/sucklessToolsConfig/scripts/bluetoothdisconnect.sh
+super + x 
+	xscreensaver-command -lock
