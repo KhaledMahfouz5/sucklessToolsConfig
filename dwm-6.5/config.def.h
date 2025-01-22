@@ -33,6 +33,9 @@ static const char *const autostart[] = {
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/colortemp.sh", NULL,
   	"sh", "-c", "sxhkd -c $HOME/sucklessToolsConfig/sxhkd/sxhkdrc &", NULL,
   	"sh", "-c", "/usr/bin/syncthing --no-browser", NULL,
+  	"sh", "-c", "pipewire", NULL,
+  	"sh", "-c", "wireplumber", NULL,
+  	"sh", "-c", "pipewire-pulse", NULL,
   	"sh", "-c", "xscreensaver --no-splash &", NULL,
 	NULL
 };
@@ -80,7 +83,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
