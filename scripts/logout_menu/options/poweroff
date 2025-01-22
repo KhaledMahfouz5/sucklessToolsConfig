@@ -1,1 +1,1 @@
-doas /sbin/poweroff
+doas poweroff
