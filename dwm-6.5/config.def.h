@@ -30,6 +30,8 @@ static const char *const autostart[] = {
   	"sh", "-c", "nitrogen --restore", NULL,
   	"sh", "-c", "udiskie &", NULL,
   	"sh", "-c", "pipewire", NULL,
+  	"sh", "-c", "wireplumber", NULL,
+  	"sh", "-c", "pipewire-pulse", NULL,
   	"sh", "-c", "setxkbmap -layout us,ara -option grp:alt_shift_toggle", NULL,
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/picom.sh", NULL,
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/colortemp.sh", NULL,
