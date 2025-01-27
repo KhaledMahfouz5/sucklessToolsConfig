@@ -1,3 +1,2 @@
 #!/bin/bash
-
-picom -bCGf -i 0.8 -e 0.8 --no-fading-openclose --sw-opti
+picom -b --no-fading-openclose --backend glx --vsync -i 0.8 -e 0.8
