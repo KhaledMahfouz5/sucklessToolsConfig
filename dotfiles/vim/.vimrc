@@ -1,11 +1,12 @@
-:set number
-:set relativenumber
-:set mouse=a
-:colorscheme desert
-:set ignorecase
-:set smartcase
+set number
+set relativenumber
+set mouse=a
+colorscheme desert
+set ignorecase
+set smartcase
 syntax on
-:set hlsearch
+set hlsearch
+set termbidi
 "" vim plugins 
 call plug#begin()
 Plug 'prabirshrestha/vim-lsp'
