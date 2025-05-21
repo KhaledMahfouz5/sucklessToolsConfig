@@ -168,6 +168,9 @@ sudo make install
 - The status bar shows system information using Python scripts
 - Color temperature adjusts automatically based on time of day
 
+# TODO
+make a convertion script that toggles between network services : `{NetworkManager} <===> {dhcpcd,dhcpcd-eth0,wpa_supplicant}`
+
 ## Note
 
 - The `scripts/statusbar/pythonvenv` directory is ignored as it can be generated with:
