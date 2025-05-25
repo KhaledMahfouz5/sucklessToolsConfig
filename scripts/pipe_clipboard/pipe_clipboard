@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # List options from the specified directory and pass the selection to dmenu
-selected_option=$(ls -1 "$HOME/sucklessToolsConfig/scripts/pipe_clipboard/options" | dmenu -nf green -sb green "$@")
+selected_option=$(ls -1 "$HOME/sucklessToolsConfig/scripts/pipe_clipboard/options" | dmenu -p "pass clipboard content to : " -nf green -sb green "$@")
 
 # Check if an option was selected
 if [ -n "$selected_option" ]; then
