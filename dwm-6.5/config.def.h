@@ -35,7 +35,7 @@ static const char *const autostart[] = {
   	"sh", "-c", "bash $HOME/sucklessToolsConfig/scripts/colortemp.sh", NULL,
   	"sh", "-c", "sxhkd -c $HOME/sucklessToolsConfig/sxhkd/sxhkdrc &", NULL,
   	"sh", "-c", "/usr/bin/syncthing --no-browser", NULL,
-  	"sh", "-c", "/usr/bin/emacs --deamon &", NULL,
+  	"sh", "-c", "/usr/bin/emacs --deamon & &", NULL,
   	"sh", "-c", "xscreensaver --no-splash &", NULL,
 	NULL
 };
