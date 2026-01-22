@@ -93,7 +93,7 @@ sudo zypper install nitrogen conky sxhkd xscreensaver syncthing python3 python3-
 ```bash
 python3 -m venv scripts/statusbar/pythonvenv
 source scripts/statusbar/pythonvenv/bin/activate
-pip install psutil # Add other required Python packages here
+pip install hijridate
 ```
 
 ### 4. Clone and Build
@@ -167,9 +167,6 @@ sudo make install
 - Check `sxhkd/sxhkdrc` for keyboard shortcuts
 - The status bar shows system information using Python scripts
 - Color temperature adjusts automatically based on time of day
-
-# TODO
-make a convertion script that toggles between network services : `{NetworkManager} <===> {dhcpcd,dhcpcd-eth0,wpa_supplicant}`
 
 ## Note
 
