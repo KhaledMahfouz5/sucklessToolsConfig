@@ -154,7 +154,7 @@
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       org               ; organize your plain life in plain text
+       (org)               ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
@@ -193,33 +193,3 @@
        :config
        ;;literate
        (default +bindings +smartparens))
-
-;; Import EAF 
-(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
-(require 'eaf)
-(require 'eaf-music-player)
-(require 'eaf-browser)
-(require 'eaf-js-video-player)
-(require 'eaf-2048)
-(require 'eaf-markdown-previewer)
-(require 'eaf-file-browser)
-(require 'eaf-jupyter)
-(require 'eaf-pyqterminal)
-(require 'eaf-pdf-viewer)
-(require 'eaf-system-monitor)
-(require 'eaf-camera)
-(require 'eaf-vue-tailwindcss)
-(require 'eaf-mind-elixir)
-(require 'eaf-org-previewer)
-(require 'eaf-terminal)
-(require 'eaf-demo)
-(require 'eaf-video-player)
-(require 'eaf-rss-reader)
-(require 'eaf-video-editor)
-(require 'eaf-vue-demo)
-(require 'eaf-image-viewer)
-(require 'eaf-markmap)
-(require 'eaf-mindmap)
-(require 'eaf-git)
-(require 'eaf-file-manager)
-
