@@ -5,23 +5,26 @@ This repository contains my configuration for suckless tools (dwm, st, dmenu, et
 ## Info From My System 
 ```
 ----------------------------------------------------------------------
-                 `-++:`                                      
-               ./oooooo/-                  ------------------
-            `:oooooooooooo:.               OS: openSUSE Leap 15.6 x86_64
-          -+oooooooooooooooo+-`            Host: Inspiron 3501
-       ./oooooooooooooooooooooo/-          Kernel: 6.4.0-150600.23.25-default
-      :oooooooooooooooooooooooooo:                        
-    `  `-+oooooooooooooooooooo/-   `                                         
- `:oo/-   .:ooooooooooooooo+:`  `-+oo/.    Shell: bash 4.4.23
-`/oooooo:.   -/oooooooooo/.   ./oooooo/.   Resolution: 1920x1080
-  `:+ooooo+-`  `:+oooo+-   `:oooooo+:`     WM: dwm
-     .:oooooo/.   .::`   -+oooooo/.        Theme: Breeze [GTK2/3]
-        -/oooooo:.    ./oooooo+-           Icons: breeze-dark [GTK2/3]
-          `:+ooooo+-:+oooooo:`             Terminal: alacritty
-             ./oooooooooo/.                CPU: 11th Gen Intel i5-1135G7 (8) @ 4.200GHz
-                -/oooo+:`                  GPU: Intel TigerLake-LP GT2 [Iris Xe Graphics]
-                  `:/.                     Memory: 593MiB / 7671MiB
-				                           ------------------
+khaled@void-3501:~ $ neofetch
+                __.;=====;.__                   khaled@void-3501
+            _.=+==++=++=+=+===;.                ----------------
+             -=+++=+===+=+=+++++=_              OS: Void Linux x86_64
+        .     -=:``     `--==+=++==.            Host: Inspiron 3501
+       _vi,    `            --+=++++:           Kernel: 6.12.10_1
+      .uvnvi.       _._       -==+==+.          Uptime: 59 mins
+     .vvnvnI`    .;==|==;.     :|=||=|.         Packages: 456 (xbps-query)
++QmQQmpvvnv; _yYsyQQWUUQQQm #QmQ#:QQQWUV$QQm.   Shell: bash 5.2.32
+ -QQWQWpvvowZ?.wQQQE==<QWWQ/QWQW.QQWW(: jQWQE   Theme: Breeze [GTK2/3]
+  -$QQQQmmU'  jQQQ@+=<QWQQ)mQQQ.mQQQC+;jWQQ@'   Icons: breeze-dark [GTK2/3]
+   -$WQ8YnI:   QWQQwgQQWV`mWQQ.jQWQQgyyWW@!     Terminal: tmux
+     -1vvnvv.     `~+++`        ++|+++          CPU: 11th Gen Intel i5-1135G7 (8) @ 4.200GHz
+      +vnvnnv,                 `-|===           GPU: Intel TigerLake-LP GT2 [Iris Xe Graphics]
+       +vnvnvns.           .      :=-           Memory: 204MiB / 7672MiB
+        -Invnvvnsi..___..=sv=.     `
+          +Invnvnvnnnnnnnnvvnn;.
+            ~|Invnvnvvnvvvnnv}+`
+               -~|{*l}*|~
+
 ----------------------------------------------------------------------
 ```
 ## ScreenShots
@@ -90,7 +93,7 @@ sudo zypper install nitrogen conky sxhkd xscreensaver syncthing python3 python3-
 ```bash
 python3 -m venv scripts/statusbar/pythonvenv
 source scripts/statusbar/pythonvenv/bin/activate
-pip install psutil # Add other required Python packages here
+pip install hijridate
 ```
 
 ### 4. Clone and Build
