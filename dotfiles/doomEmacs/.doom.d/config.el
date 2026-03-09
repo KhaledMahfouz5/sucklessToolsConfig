@@ -73,3 +73,23 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Zathura Like pdf experience !!
+   (after! pdf-tools
+     (setq pdf-view-midnight-colors '("#FFFFFF" . "#000000"))
+     (map! :map pdf-view-mode-map
+        :n "C-r" #'pdf-view-midnight-minor-mode))
+
+;; Cool Doom quit messages
+(setq +doom-quit-messages
+      '("يا غالي، رايح وتاركني؟"
+        "يلا، بشوفك على خير!"
+        "كأنو بكير؟ لسه ما شبعنا منك!"
+        "ماشي، الله معك يا بطل."
+        "شوو .. وين يا مهون !!"
+        "له يا زلمه !! نسيت الخبز و الملح ؟!"
+        "خليك لا تروح .. القهوة على النار"
+        "لاء .. بدنا نروق .. بدنا نهدأ شوي"
+        "لاء .. هيك رح ازعل منك"
+        "تصبح على خير، لا تنسى تحفظ شغلك!"))
+

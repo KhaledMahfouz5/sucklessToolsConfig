@@ -1,8 +1,9 @@
 # Aliases 
+alias eza='eza --icons --group-directories-first'
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias ls='ls --color=auto'
+alias ls='eza'
 alias grep='grep --color=auto'
 alias rm='rm -i'
 alias du='du -bsh'
@@ -15,10 +16,10 @@ alias scrcpy='scrcpy --video-codec=h265 --max-size=1920 --max-fps=60'
 # Custom Prompt
 PS1='\[\e[34m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[0m\]\W \$ '
 # xbps Aliases
-alias install='sudo xbps-install -S'
-alias update='install;sudo xbps-install -u xbps;sudo xbps-install -u'
-alias query='sudo xbps-query -Rs'
-alias remove='sudo xbps-remove -R'
+alias i='sudo xbps-install -S'
+alias u='i;sudo xbps-install -u xbps;sudo xbps-install -u'
+alias q='sudo xbps-query -Rs'
+alias r='sudo xbps-remove -R'
 alias cmatrix='cmatrix -s'
 alias qrscanner='qrscanner --clear'
 alias less='less -R'
@@ -32,4 +33,13 @@ export XDG_CURRENT_DESKTOP=dwm
 export IDF_PATH=~/data/additional/portable-apps/esp-idf
 export IDF_TOOLS_PATH="$HOME/.espressif"
 
-# temp aliases
+# zoxide setup
+eval "$(zoxide init bash)"
+
+# fzf keybindings
+if [[ -f /usr/share/fzf/key-bindings.bash ]]; then
+  source /usr/share/fzf/key-bindings.bash
+fi   
+
+# random color script
+colorscript -r
