@@ -24,12 +24,8 @@ while True:
     battery_status = next(line.split('=')[1] for line in uevent_data.splitlines() if 'POWER_SUPPLY_STATUS=' in line)
     battery = f"{battery_percentage}% [{battery_status}]"
 
-    # Check if record-screen.sh is running
-    recording_process = subprocess.run(['pgrep', '-f', 'record-screen.sh'], capture_output=True, text=True).stdout.strip()
-    is_recording = "| [Recording] " if recording_process else ""
-
     # Make Status Text
-    status = f" Bat : {battery} {is_recording}| Lang : {lang} | Vol : {volume} | Date : {formatted_date} | Time : {current_time} "
+    status = f" Bat : {battery} | Lang : {lang} | Vol : {volume} | Date : {formatted_date} | Time : {current_time} "
     subprocess.run(["xprop", "-root", "-set", "WM_NAME", status])
     print(status)
     time.sleep(1)
